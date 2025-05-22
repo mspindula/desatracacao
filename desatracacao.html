@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VLI - Desatracação</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="manifest" href="manifest.json" />
+        <link
+            rel="icon"
+            href="./icons/untitled-1_141.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <p>DETALHES DA OPERAÇÃO</p>
+            </div>
+            <div class="box" data-label="Data">
+                <label for="dataAtual">Data</label>
+                <div id="dataAtual">03/05/2025</div>
+            </div>
+            <div class="box" data-label="Berço">
+                <select>
+                    <option>TPD3</option>
+                    <option>TPD4</option>
+                </select>
+            </div>
+
+            <div class="box" data-label="Tipo de Operação">
+                <label class="text" for="tipoOperacao">Tipo de Operação</label>
+                <select id="tipoOperacao">
+                    <option value="Desatracação">Desatracação</option>
+                </select>
+            </div>
+            <div class="boxs" data-operacao="atracacao">
+                <label>Navio</label><input type="text" placeholder="Nome" />
+            </div>
+            <div class="boxs">
+                <label>Término da Operação</label>
+                <input type="text" placeholder="Horário" />
+            </div>
+            <div class="boxs">
+                <label>Arqueação</label>
+                <input type="text" placeholder="Horário" />
+            </div>
+            <div class="boxs">
+                <label>Saída de Bordo do Agente</label>
+                <input type="text" placeholder="Horário" />
+            </div>
+
+            <div class="boxs">
+                <label>Marcação do Prático</label>
+                <input type="text" placeholder="Horário" />
+            </div>
+
+            <div class="boxs">
+                <label>Prático a Bordo</label>
+                <input type="text" placeholder="Horário" />
+            </div>
+            <div class="boxs">
+                <label>Desatracação</label>
+                <input type="text" placeholder="Horário" />
+            </div>
+            <div class="boxs">
+                <label>Prático(a)</label>
+                <input type="text" placeholder="Nome" />
+            </div>
+            <div class="boxs">
+                <label>Rebocadores</label>
+                <input type="text" placeholder="Nome" />
+            </div>
+            <div class="boxs">
+                <label>Carga Prevista</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+            <div class="boxs">
+                <label>Total Balança</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+            <div class="boxs">
+                <label>Carga Arqueada VLI</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+
+            <div class="boxs">
+                <label>Carga Arqueada Navio</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+            <div class="boxs">
+                <label>Carga Arqueada Comprador</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+            <div class="boxs">
+                <label>Carga Arqueada P&I</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+            <div class="boxs">
+                <label>Inspetor VLI</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+            <div class="boxs">
+                <label>Observações</label>
+                <input type="text" placeholder="Texto" />
+            </div>
+
+            <div class="boxs" style="justify-content: center">
+                <button onclick="gerarPDF()">Gerar PDF</button>
+            </div>
+            <div class="boxs" style="justify-content: center">
+                <button onclick="gerarExcel()">Gerar Excel</button>
+            </div>
+            <div class="boxs" style="justify-content: center">
+                <button onclick="limparDadosExcel()">Limpar Dados Excel</button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+        <script src="desatracacao.js"></script>
+    </body>
+</html>
