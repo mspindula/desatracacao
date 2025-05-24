@@ -9,7 +9,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 async function gerarPDF() {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+    const doc = new jsPDF({
+        unit: "mm", // milímetros
+        format: [210, 400], // largura x altura
+    });
     let y = 10;
 
     doc.setFont("helvetica", "bold");
